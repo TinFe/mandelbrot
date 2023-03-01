@@ -26,7 +26,7 @@ class MainWindow(qtw.QMainWindow):
                 pos = qtc.QPoint(col, row)
                 image.setPixel(pos, test.pixel_array[row][col])
 
-        filename = 'images/mandelbrot.png'
+        filename = 'mandelbrot.png'
         image.save(filename)
 
         pixmap = qtg.QPixmap.fromImage(image)
