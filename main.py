@@ -2,10 +2,10 @@ import sys
 from PyQt6 import QtWidgets as qtw
 from PyQt6 import QtGui as qtg
 from PyQt6 import QtCore as qtc
-from mandelbrot_OOP2 import Mandelbrot
+from mandelbrot import Mandelbrot
 
 
-test = Mandelbrot(zoom_factor=1,center=(0,0),iterations=100,size=800)
+test = Mandelbrot(zoom_factor=1,center=(0,0),iterations=100,size=200)
 
 
 # create a MainWindow class
@@ -23,6 +23,7 @@ class MainWindow(qtw.QMainWindow):
 
         for row in range(len(test.pixel_array)):
             for col in range(len(test.pixel_array[0])):
+                print(f'view loop running row, col = {row,col}')
                 pos = qtc.QPoint(col, row)
                 image.setPixel(pos, test.pixel_array[row][col])
 

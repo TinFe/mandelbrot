@@ -31,6 +31,7 @@ class Mandelbrot:
             new_row = []
             for col in range(self.canvas_width):
                 iterate_count = self.iterate(complex(self.test_coordinate[0], self.test_coordinate[1]), iterations)
+                print(f'object loop running row, col = {row,col}')
                 # check if iterate_count is the new min or max
                 if iterate_count > self.max_iterations:
                     self.max_iterations = iterate_count
